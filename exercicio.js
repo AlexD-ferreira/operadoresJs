@@ -73,8 +73,13 @@
    let valorCompra = 250.00;
 
    let verificarIdade = idade >= 18 ;
+   let vertificarValor = codigoDigitalizado == codigoRegistrado;
+   let verificarValorTipo = codigoDigitalizado === codigoRegistrado;
+   let tipoDiferente = codigoDigitalizado != codigoRegistrado;
+   let saldoSuficiente = saldo >= valorCompra;
 
-   console.log(`Maior de idade : ${verificarIdade}`)
+   console.log(`Maior de idade : ${verificarIdade} \nO codigo confere com o valor do banco : ${vertificarValor} \nO codigo confere com o valor e tipo do banco : ${
+   verificarValorTipo}\nO tipo de dado são diferentes : ${tipoDiferente} \nO saldo da compra e sificiente: ${saldoSuficiente}`)
 
 
 /* ==========================================================================
@@ -98,3 +103,15 @@
    3. Acesso à área VIP: liberado para assinantes premium, ou para compras a
       partir de 300 reais que possuam cupom promocional.
    ========================================================================== */
+
+   let compra = 220;
+   let assinaturaPremium = false;
+   let cupom = true;
+   let endereçoRestricao = false;
+   let clienteEstudante = true;
+   let clienteIdade = 22;
+
+   let freteGratis = compra >= 200 || assinaturaPremium === true && endereçoRestricao === false;
+   let descontoUniversitario = clienteEstudante && clienteIdade <= 29;
+   let acessoVip = assinaturaPremium === true || compra >= 300 && cupom ;
+   console.log(`Tem frente gratis : ${freteGratis} \nPossui desconto : ${descontoUniversitario} \nAcesso vip : ${acessoVip}`)
